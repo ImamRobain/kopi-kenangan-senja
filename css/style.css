@@ -17,7 +17,7 @@ body {
   background-color: var(--bg);
   color: #fff;
   /* Nanti dihapus */
-  /* min-height: 2000px; */
+  min-height: 2000px;
 }
 
 /* Navbar */
@@ -145,6 +145,50 @@ body {
   box-shadow: 1px 1px 3px rgba(1, 1, 3 0.5);
   margin-top: 1rem;
 }
+
+/* About Section */
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
 /* Media Queries */
 
 /* Laptop */
@@ -198,6 +242,25 @@ body {
   }
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.5);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 23rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .content {
+    padding: 0;
+  }
+  .about .row .content h3 {
+    margin-top: 1.4rem;
+  }
+  .about .row .content p {
+    font-size: 1.6rem;
   }
 }
 

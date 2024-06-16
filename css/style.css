@@ -17,7 +17,7 @@ body {
   background-color: var(--bg);
   color: #fff;
   /* Nanti dihapus */
-  min-height: 2000px;
+  min-height: 3000px;
 }
 
 /* Navbar */
@@ -112,7 +112,7 @@ body {
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 55rem;
+  max-width: 54rem;
 }
 
 .hero .content h1 {
@@ -147,7 +147,8 @@ body {
 }
 
 /* About Section */
-.about {
+.about,
+.menu {
   padding: 8rem 7% 1.4rem;
 }
 
@@ -157,7 +158,8 @@ body {
   margin-bottom: 3rem;
 }
 
-.about h2 span {
+.about h2 span,
+.menu h2 span {
   color: var(--primary);
 }
 
@@ -175,7 +177,7 @@ body {
 
 .about .row .content {
   flex: 1 1 35rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .about .row .content h3 {
@@ -189,6 +191,39 @@ body {
   font-weight: 200;
   line-height: 1.5;
 }
+
+/* Menu Section */
+.menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+.menu p {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.menu .row .menu-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+.menu .row .menu-card .menu-card-tittle {
+  margin: 1rem auto 0.6rem;
+}
+
 /* Media Queries */
 
 /* Laptop */
@@ -261,6 +296,9 @@ body {
   }
   .about .row .content p {
     font-size: 1.6rem;
+  }
+  .menu p {
+    font-size: 1.3rem;
   }
 }
 

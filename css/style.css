@@ -307,4 +307,10 @@ body {
   html {
     font-size: 55%;
   }
+  .about .row h3 {
+    text-align: center;
+  }
+  .about .row p {
+    text-align: center;
+  }
 }

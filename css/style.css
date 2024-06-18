@@ -17,7 +17,7 @@ body {
   background-color: var(--bg);
   color: #fff;
   /* Nanti dihapus */
-  min-height: 3000px;
+  min-height: 5000px;
 }
 
 /* Navbar */
@@ -148,7 +148,8 @@ body {
 
 /* About Section */
 .about,
-.menu {
+.menu,
+.contact {
   padding: 8rem 7% 1.4rem;
 }
 
@@ -159,7 +160,8 @@ body {
 }
 
 .about h2 span,
-.menu h2 span {
+.menu h2 span,
+.contact h2 span {
   color: var(--primary);
 }
 
@@ -198,7 +200,8 @@ body {
   font-size: 2.6rem;
   margin-bottom: 1rem;
 }
-.menu p {
+.menu p,
+.contact p {
   text-align: center;
   max-width: 50rem;
   margin: auto;
@@ -224,6 +227,61 @@ body {
   margin: 1rem auto 0.6rem;
 }
 
+/* Contact Section */
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+  border-radius: 5px;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.contact .row form {
+  flex: 1 1 40rem;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 1.4rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+  border-radius: 5px;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form .btn-sub {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+  border-radius: 10px;
+}
 /* Media Queries */
 
 /* Laptop */
@@ -299,6 +357,15 @@ body {
   }
   .menu p {
     font-size: 1.3rem;
+  }
+  .contact .row {
+    flex-wrap: wrap;
+  }
+  .contact .row .map {
+    height: 30rem;
+  }
+  .contact .row form {
+    padding-top: 0;
   }
 }
 

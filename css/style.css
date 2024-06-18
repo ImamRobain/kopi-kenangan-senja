@@ -16,8 +16,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  /* Nanti dihapus */
-  min-height: 5000px;
 }
 
 /* Navbar */
@@ -200,6 +198,7 @@ body {
   font-size: 2.6rem;
   margin-bottom: 1rem;
 }
+
 .menu p,
 .contact p {
   text-align: center;
@@ -219,10 +218,12 @@ body {
   text-align: center;
   padding-bottom: 4rem;
 }
+
 .menu .row .menu-card img {
   border-radius: 50%;
   width: 80%;
 }
+
 .menu .row .menu-card .menu-card-tittle {
   margin: 1rem auto 0.6rem;
 }
@@ -282,8 +283,46 @@ body {
   cursor: pointer;
   border-radius: 10px;
 }
-/* Media Queries */
 
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 0.5rem 0 1rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 0.5rem;
+}
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: bold;
+}
+
+/* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {
   html {
@@ -333,6 +372,7 @@ body {
   .navbar .navbar-nav a::after {
     transform-origin: center;
   }
+
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.5);
   }
@@ -346,24 +386,31 @@ body {
     object-fit: cover;
     object-position: center;
   }
+
   .about .row .content {
     padding: 0;
   }
+
   .about .row .content h3 {
     margin-top: 1.4rem;
   }
+
   .about .row .content p {
     font-size: 1.6rem;
   }
+
   .menu p {
     font-size: 1.3rem;
   }
+
   .contact .row {
     flex-wrap: wrap;
   }
+
   .contact .row .map {
     height: 30rem;
   }
+
   .contact .row form {
     padding-top: 0;
   }
@@ -374,9 +421,11 @@ body {
   html {
     font-size: 55%;
   }
+
   .about .row h3 {
     text-align: center;
   }
+
   .about .row p {
     text-align: center;
   }

@@ -186,7 +186,8 @@ body {
 /* About Section */
 .about,
 .menu,
-.contact {
+.contact,
+.products {
   padding: 8rem 7% 1.4rem;
 }
 
@@ -198,7 +199,8 @@ body {
 
 .about h2 span,
 .menu h2 span,
-.contact h2 span {
+.contact h2 span,
+.products h2 span {
   color: var(--primary);
 }
 
@@ -239,7 +241,8 @@ body {
 }
 
 .menu p,
-.contact p {
+.contact p,
+.products p {
   text-align: center;
   max-width: 50rem;
   margin: auto;
@@ -265,6 +268,89 @@ body {
 
 .menu .row .menu-card .menu-card-tittle {
   margin: 1rem auto 0.6rem;
+}
+
+/* Products Section */
+.products h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.products .product-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products .product-icons a {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #fff;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products .product-icons a:hover {
+  color: var(--primary);
+  /* background-color: #fff; */
+}
+
+.products .product-icons a .eye,
+.products .product-icons a .shopping-cart {
+  width: 20px;
+  height: 20px;
+}
+
+.products .product-image {
+  padding: 1rem 0;
+}
+.products .product-image img {
+  height: 15rem;
+  border-radius: 10px;
+}
+
+.products .product-content h3 {
+  font-size: 1.5rem;
+}
+
+.products .product-stars {
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+
+.products .product-stars .star-full {
+  fill: var(--primary);
+}
+
+.products .product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.products .product-content .product-through-price {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 0.8rem;
 }
 
 /* Contact Section */
@@ -444,6 +530,11 @@ footer .credit a {
 
   .menu p {
     font-size: 1.3rem;
+  }
+  .products .product-icons a .eye,
+  .products .product-icons a .shopping-cart {
+    width: 15px;
+    height: 15px;
   }
 
   .contact .row {

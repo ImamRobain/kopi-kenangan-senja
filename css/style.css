@@ -10,6 +10,7 @@
   outline: none;
   border: none;
   text-decoration: none;
+  /* outline: 1px solid red; */
 }
 
 html {
@@ -20,6 +21,8 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
+  /* GPT */
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -31,6 +34,7 @@ body {
   background-color: rgba(1, 1, 1, 0.8);
   border-bottom: 1px solid #513c28;
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -89,8 +93,8 @@ body {
 /* Search Form */
 .navbar .search-form {
   position: absolute;
-  top: 99%;
-  right: 8%;
+  top: 100%;
+  right: 10%;
   background-color: #fff;
   width: 20rem;
   height: 4rem;
@@ -286,7 +290,8 @@ body {
 }
 
 /* Menu Section */
-.menu h2 {
+.menu h2,
+.contact h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 1rem;
@@ -334,6 +339,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1.5rem;
   margin-top: 4rem;
+  /* GPT */
+  overflow: hidden;
 }
 
 .products .product-card {
@@ -341,6 +348,8 @@ body {
   border: 1px solid #666;
   padding: 1rem;
   border-radius: 5px;
+  /* GPT */
+  max-width: 100%;
 }
 
 .products .product-icons {
@@ -354,8 +363,8 @@ body {
   height: 2.5rem;
   color: #fff;
   margin: 0.3rem;
-  border: 1px solid #666;
-  border-radius: 50%;
+  /* border: 1px solid #666; */
+  /* border-radius: 50%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,9 +384,13 @@ body {
 .products .product-image {
   padding: 1rem 0;
 }
+
 .products .product-image img {
   height: 15rem;
   border-radius: 10px;
+  /* GPT */
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .products .product-content h3 {
@@ -408,8 +421,6 @@ body {
 /* Contact Section */
 .contact h2 {
   text-align: center;
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
 }
 
 .contact .row {

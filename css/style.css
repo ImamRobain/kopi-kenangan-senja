@@ -328,6 +328,11 @@ body {
 }
 
 /* Products Section */
+.products {
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+}
 .products h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -525,7 +530,7 @@ footer .credit a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal .modal-container {
+.modal-container {
   position: relative;
   background-color: #efefef;
   color: var(--bg);
@@ -534,6 +539,7 @@ footer .credit a {
   border: 1px solid #666;
   width: 80%;
   animation: animateModal 0.5s;
+  border-radius: 5px;
 }
 
 /* Modal Animation */
@@ -548,26 +554,52 @@ footer .credit a {
   }
 }
 
-.modal .modal-container .close-icon {
+.modal-container .close-icon {
   position: absolute;
   right: 1rem;
 }
 
-.modal .modal-container .modal-content {
+.modal-content {
   display: flex;
   flex-wrap: nowrap;
+}
+
+.modal-content h3 {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .modal .modal-container .modal-content img {
   height: 15rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
+  border-radius: 10px;
 }
 
 .modal .modal-container .modal-content p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5rem;
-  margin-top: 1.1rem;
+  margin: 0.6rem 0;
+}
+.moda .product-stars {
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+
+.modal .product-stars .star-full {
+  fill: var(--primary);
+}
+
+.modal .product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.modal .product-through-price {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 0.8rem;
 }
 
 .modal .modal-container .modal-content a {
@@ -577,7 +609,12 @@ footer .credit a {
   background-color: var(--primary);
   color: #fff;
   margin-top: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
 }
 /* Media Queries */
 /* Laptop */
@@ -682,7 +719,19 @@ footer .credit a {
   }
 
   .modal-content {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .modal .modal-container .modal-content a {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
   }
 }
 

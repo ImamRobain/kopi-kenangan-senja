@@ -190,6 +190,16 @@ body {
   mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
 }
 
+.hero .mask-container {
+  position: absolute;
+  /* background-color: red; */
+  inset: 0;
+  mask-image: url(../img/header-bg-svg.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
+}
+
 /* .hero::after {
   content: "";
   display: block;

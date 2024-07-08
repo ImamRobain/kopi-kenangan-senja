@@ -168,13 +168,13 @@ body {
 }
 
 .shopping-cart img {
-  height: 5rem;
+  height: 4rem;
   border-radius: 10px;
 }
 
 .shopping-cart h3 {
-  font-size: 1.3rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+  /* padding-bottom: 0.5rem; */
 }
 
 .shopping-cart .item-price {

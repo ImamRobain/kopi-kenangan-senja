@@ -18,6 +18,15 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Alpine.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- App -->
+    <script src="src/app.js"></script>
   </head>
 
   <body>
@@ -162,7 +171,7 @@
     <!-- Menu Section End -->
 
     <!-- Products Section Start -->
-    <section class="products" id="products">
+    <section class="products" id="products" x-data="products">
       <h2><span>Produk Unggulan</span> Kami</h2>
       <p>
         Temukan produk unggulan kami yang menawarkan kualitas terbaik dan
@@ -172,98 +181,103 @@
         dan rasakan perbedaannya!
       </p>
       <div class="row">
-        <div class="product-card">
-          <div class="product-image">
-            <img src="img/products/P1.jpg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Brazilian Coffee Beans</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class=""></i>
+        <template x-for="(item, index) in items" x-key="index">
+          <div class="product-card">
+            <div class="product-image">
+              <img :src="`img/products/${item.img}`" :alt="items.name" />
             </div>
-            <div class="product-through-price">Rp. 45.000</div>
-            <div class="product-price">Rp. 30.000</div>
-            <div class="product-icons">
-              <a href="#"><i data-feather="shopping-cart"></i></a>
-              <a href="#" class="item-detail-button"
-                ><i data-feather="eye"></i
-              ></a>
+            <div class="product-content">
+              <h3 x-text="item.name"></h3>
+              <div class="product-stars">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="img/feather-sprite.svg#star" />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="img/feather-sprite.svg#star" />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="img/feather-sprite.svg#star" />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="img/feather-sprite.svg#star" />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <use href="img/feather-sprite.svg#star" />
+                </svg>
+              </div>
+              <div class="product-through-price">Rp. 45.000</div>
+              <div class="product-price" x-text="item.price"></div>
+              <div class="product-icons">
+                <a href="#">
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <use href="img/feather-sprite.svg#shopping-cart" />
+                  </svg>
+                </a>
+                <a href="#" class="item-detail-button">
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <use href="img/feather-sprite.svg#eye" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product-image">
-            <img src="img/products/P1.jpg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Brazilian Coffee Beans</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class=""></i>
-            </div>
-            <div class="product-through-price">Rp. 45.000</div>
-            <div class="product-price">Rp. 30.000</div>
-            <div class="product-icons">
-              <a href="#"><i data-feather="shopping-cart"></i></a>
-              <a href="#" class="item-detail-button"
-                ><i data-feather="eye"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-image">
-            <img src="img/products/P1.jpg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Brazilian Coffee Beans</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class=""></i>
-            </div>
-            <div class="product-through-price">Rp. 45.000</div>
-            <div class="product-price">Rp. 30.000</div>
-            <div class="product-icons">
-              <a href="#"><i data-feather="shopping-cart"></i></a>
-              <a href="#" class="item-detail-button"
-                ><i data-feather="eye"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-image">
-            <img src="img/products/P1.jpg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Brazilian Coffee Beans</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class=""></i>
-            </div>
-            <div class="product-through-price">Rp. 45.000</div>
-            <div class="product-price">Rp. 30.000</div>
-            <div class="product-icons">
-              <a href="#"><i data-feather="shopping-cart"></i></a>
-              <a href="#" class="item-detail-button"
-                ><i data-feather="eye"></i
-              ></a>
-            </div>
-          </div>
-        </div>
+        </template>
       </div>
     </section>
     <!-- Products Section End -->

@@ -64,18 +64,31 @@
 
       <!-- Shopping Cart Start -->
       <div class="shopping-cart">
-        <div class="cart-item">
-          <img src="img/products/P1.jpg" alt="Produk 1" />
-          <div class="item-detail">
-            <h3>Brazilian Coffee Beans</h3>
-            <div class="item-price">
-              <span>Rp. 30.000</span> &times;
-              <button id="descrease">&minus;</button>
-              <span>1</span>
-              <button id="increase">&plus;</button>
+        <template x-for="(item, index) in $store.cart.items" x-keys="index">
+          <div class="cart-item">
+            <img :src="`img/products/${item.img}`" :alt="item.name" />
+            <div class="item-detail">
+              <h3 x-text="item.name"></h3>
+              <div class="item-price">
+                <span x-text="rupiah(item.price)"></span> &times;
+                <button id="decrease" @click="$store.cart.remove(item.id)">
+                  &minus;
+                </button>
+                <span x-text="item.quantity"></span>
+                <button id="increase" @click="$store.cart.add(item)">
+                  &plus;
+                </button>
+                <span x-text=" rupiah(item.total)"></span>
+              </div>
             </div>
           </div>
-        </div>
+        </template>
+        <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem">
+          Cart Is Empty
+        </h4>
+        <h4 x-show="$store.cart.items.length">
+          Total: <span x-text="rupiah($store.cart.total)"></span>
+        </h4>
       </div>
       <!-- Shopping Cart End -->
     </nav>
@@ -239,7 +252,9 @@
                 </svg>
               </div>
               <div class="product-through-price">Rp. 45.000</div>
-              <div class="product-price" x-text="rupiah( item.price)"></div>
+              <div class="product-price">
+                <span x-text="rupiah(item.price)"></span>
+              </div>
               <div class="product-icons">
                 <a href="#" @click.prevent="$store.cart.add(item)">
                   <svg

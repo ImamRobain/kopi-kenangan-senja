@@ -181,6 +181,24 @@ body {
   font-size: 1rem;
 }
 
+.shopping-cart .cart-item #decrease,
+.shopping-cart .cart-item #increase {
+  display: inline-block;
+  padding: 2px 5px;
+  cursor: pointer;
+  margin: 0 8px;
+  background-color: #010101;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.shopping-cart h4 {
+  font-size: 1.6rem;
+  margin-top: -1rem;
+  text-align: center;
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
